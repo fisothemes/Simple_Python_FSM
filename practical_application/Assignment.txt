@@ -1,0 +1,37 @@
+Dr. Kujo is a worlds-famous expert in Marine Biology. 
+He and his team have performed a large number of complex experiments. 
+The results of these experiments are stored in the file 'results.txt'.
+
+There are four rows of data in this file.
+
+1st Row - is the experiment number.
+2nd Row - is the day of the experiment, in the format 'dd.mm'.
+3rd Row - is the time of the experiment, in the format 'hh.mm'.
+4th Row - is the experimental data.
+
+Dr Kujo wants a Python computer program using Python to analyse the experimental results. 
+The program should read the data from the '.txt' file and also to write new data into another '.txt' file. 
+
+The list of functions the program should perform is:
+
+1. Read the data from the 'results.txt' file and display the data on the screen.
+   The new file should be called 'Kujo_data.txt'.
+
+2. Do some basic data processing, such as:
+	i.  Finding the maximum and the minimum value of the experimental results.
+	ii. Calculate the average value and the standard deviation value of the experimental results.
+	iii.Calculate how many experiments resulted in values greater than some input value.
+	vi. Sort the experiments data in ascending and descending order.
+
+3. Process the data according to functions in 2. for a portion of data specified by the user.
+   e.g. for all data between certain times, or for all data on a specific date, or for data for experiment 
+   numbers <x> to <y>).
+
+4. Return the experiment number, the day and the time for any individual experiment value requested by the 
+   user, in the format: 
+
+	“The value <w> has been found in experiment number <x> which was performed on day <y> at time <z>” 
+   
+   If the value does not match any of the experiment’s data values, the information for the value closest 
+   to the input value should be returned.
+	
