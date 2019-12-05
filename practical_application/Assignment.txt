@@ -15,7 +15,6 @@ The program should read the data from the '.txt' file and also to write new data
 The list of functions the program should perform is:
 
 1. Read the data from the 'results.txt' file and display the data on the screen.
-   The new file should be called 'Kujo_data.txt'.
 
 2. Do some basic data processing, such as:
 	i.  Finding the maximum and the minimum value of the experimental results.
