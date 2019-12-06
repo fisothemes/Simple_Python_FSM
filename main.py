@@ -1,7 +1,7 @@
 ####################### RUN YOUR STATE MACHINE #################################
 import states                           #Imports States
 
-state = states.init()                   #INITIALIZING STATE
+state = states._init()                   #INITIALIZING STATE
 while True:
 
     if state == 'state_one':            #FIRST STATE
@@ -14,5 +14,5 @@ while True:
         state = states.state_three()
 
     if state == 'exit':                 #EXIT STATE
-        state = states.exit()
+        state = states._exit()
         break

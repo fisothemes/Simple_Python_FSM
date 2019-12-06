@@ -2,7 +2,7 @@
 
 import globals                   # Importing global variable
 
-def init():
+def _init():
     # INIT STATE (initialization State)
     # Your initialization code goes here
     # Make sure you return the FIRST STATE after your init code
@@ -39,8 +39,9 @@ def state_three():
     exit_state = 'exit'
     return exit_state
 
-def exit():
+def _exit():
     # EXIT STATE
     # Your clean up/code code goes here
     # Return not needed
     print('\n Goodbye World!')
+    exit()

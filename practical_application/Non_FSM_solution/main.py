@@ -268,7 +268,7 @@ def theFinder(x):
 h = 6
 
 def clear():
-    os.system('CLS' if os.name == 'nt' else 'CLEAR')
+    os.system('CLS' if os.name == 'nt' else 'clear')
 
 while True:
     print("""
