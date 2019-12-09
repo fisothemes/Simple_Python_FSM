@@ -13,7 +13,6 @@ def _error():
 def _exit():
     my_ui._exit
     exit()
-    return '_exit'
 
 def main_menu():
     my_ui.main_menu()
@@ -91,7 +90,7 @@ def display_mean_sd_data():
     previous_state = input('INPUT ANY VALUE TO RETURN: ')
     return 'compute_all_data'
 
-###################### COMPUTE ALL DATA STATES ################################
+###################### COMPUTE PARTIAL DATA STATES ################################
 
 def display_exp_ranged_data():
     my_ui.display_exp_ranged_data()

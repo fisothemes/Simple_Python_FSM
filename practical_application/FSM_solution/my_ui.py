@@ -6,14 +6,14 @@
 
 import globals
 import my_functions
+
 from my_functions import clear
 from my_functions import sleep
-
 from my_functions import dataAscend
 from my_functions import dataDescend
-
 from my_functions import maxminFinder
 from my_functions import statFinder
+from my_functions import largerThanInput
 
 
 
@@ -173,11 +173,11 @@ def display_data():
     ''')
     print('These are the Experiment Numbers: ')
     print('\n', globals._experiment)
-    print('These are the Dates for the Experiment Data: ')
+    print('\n These are the Dates for the Experiment Data: ')
     print('\n', globals._date)
-    print('These are the Times for the Experiment Data: ')
+    print('\n These are the Times for the Experiment Data: ')
     print('\n', globals._time)
-    print('This is the Experiment Data: ')
+    print('\n This is the Experiment Data: ')
     print('\n', globals._data)
     print('\n'*3)
 
@@ -190,7 +190,58 @@ def display_ordered_data():
 
     ''')
     print('Ascending: ')
-    print('\n', dataAscend(globals._experiment))
+    print('\n', dataAscend(globals._data))
     print('\n Descending: ')
-    print('\n', dataDescend(globals._experiment))
+    print('\n', dataDescend(globals._data))
     print('\n'*6)
+
+def display_greater_than_data():
+    clear()
+    print('''
+=====================================================
+ DISPLAY EXPERIMENTAL DATA OF VALUES GREATER THAN...
+=====================================================
+
+    ''')
+    try:
+        user_input = float(input('\n Input Value Here: '))
+        print('\n This is the Experimental data for values greater that ', user_input)
+        print('\n',largerThanInput(user_input , globals._data))
+    except:
+        print('\n Thats not a number try again.')
+    print('\n'*6)
+
+def display_max_min_data():
+    clear()
+    print('''
+=====================================================
+                MAXIMUM & MINIMUM
+=====================================================
+
+    ''')
+
+    print('\n This is the maximum experimental value:  ')
+    print('\n',maxminFinder(globals._data, 'max'))
+    print('\n This is the minimum experimental value:  ')
+    print('\n',maxminFinder(globals._data, 'min'))
+
+    print('\n'*4)
+
+def display_mean_sd_data():
+    clear()
+    print('''
+=====================================================
+                MEAN & STANDARD DEVIATION
+=====================================================
+
+    ''')
+
+    print('\n This is the mean of the experimental data:  ')
+    print('\n',statFinder(globals._data, 'mean'))
+    print('\n This is the standard deviation of experimental data:  ')
+    print('\n',statFinder(globals._data, 'standard deviation'))
+    print('\n This is the population standard deviation experimental data:  ')
+    print('\n',statFinder(globals._data, 'population standard deviation'))
+    print('\n'*2)
+
+########################## COMPUTE PARTIAL DATA UIs ################################

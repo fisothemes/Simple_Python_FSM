@@ -29,23 +29,9 @@ def statFinder(data, y):
     if y == 'population standard deviation': return pstdev(data)
     if y == 'mean': return mean(data)
 
-def largerThanInput(data):
-    dataAdder = []
-    largestData = []
-    print('PLEASE INPUT A VALUE TO FIND HOW MANY ARE LARGER THAN IT')
-    while True:
-        try:
-            inputValue = float(input('Input Value Here: '))
-            for i in x:
-                if i > inputValue:
-                    largestData.append(i)
-                    dataAdder.append(i**0)
-            largeMin = sum(dataAdder)
-            print("\n"'These are the values of data greater than', inputValue)
-            print('')
-            print(largestData)
-            print('')
-            print(int(largeMin), 'out of',len(data) ,'experiments are larger than input value of', inputValue)
-            break
-        except ValueError:
-            print('Sorry That wasnt a number')
+def largerThanInput(user_input, data):
+    new_data = []
+    for i in data:
+        if i > user_input:
+            new_data.append(i)
+    return new_data
